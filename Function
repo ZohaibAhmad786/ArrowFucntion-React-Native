@@ -1,0 +1,67 @@
+const HelloFunc=function(name){
+    console.log(`Hello How are you ${name}`);
+    
+}
+console.log(HelloFunc('ahmad'));
+// arrow function is
+const HelloFuncarrow=(name)=>{
+    console.log(`Hello How are you ${name}`);
+    
+}
+
+console.log(HelloFuncarrow('khan'));
+const todo=[
+    {
+        title:'Buy Bread',
+        price:150,
+        isDone:true
+    },
+    {
+        title:'Gyme Fee',
+        price:1000,
+        isDone:false
+    },
+    {
+        title:'Buy Pills',
+        price:100,
+        isDone:true
+    }
+]
+//foreach
+todo.forEach(function(todo,index){
+    console.log(
+     `title is ${todo.title} and price is ${todo.price} and index is ${index+1}`);
+})
+
+// function simple 
+const indextodo=function(todos,item){
+    return item=== 'Buy Bread'
+}
+console.log(indextodo(todo,"Buy Bread"));
+
+const istrue=function(todo,title){
+const todotitle=todo.find(function(todo,index){
+return todo.title.toLowerCase()===title.toLowerCase();
+})
+return todotitle
+}
+console.log(istrue(todo,"Buy Bread"));
+
+
+const istruearrow=(todo,title)=>{
+    const todotitle=todo.find((todo)=>{
+    return todo.title.toLowerCase()===title.toLowerCase();
+    })
+    return todotitle
+    }
+    console.log(istruearrow(todo,"Buy Bread"));
+
+
+    
+    console.log(todo.filter((todo)=>{
+        return todo.price===150
+    })
+    );
+    console.log(todo.filter((todo)=>  todo.price===150)
+    );
+    
